@@ -1,7 +1,6 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { GoVerified } from 'react-icons/go';
 
 import useAuthStore from '../store/authStore';
 import NoResults from './NoResults';
@@ -50,7 +49,6 @@ const Comments = ({ comment, setComment, addComment, comments, isPostingComment 
 
                           <p className='flex cursor-pointer gap-1 items-center text-[18px] font-bold leading-6 text-primary'>
                             {user.userName}{' '}
-                            <GoVerified className='text-blue-400' />
                           </p>
                         </div>
                       </Link>
@@ -72,7 +70,7 @@ const Comments = ({ comment, setComment, addComment, comments, isPostingComment 
         <form onSubmit={addComment} className='flex gap-4'>
           <input
             value={comment}
-            onChange={(e) => setComment(e.target.value.trim())}
+            onChange={(e) => setComment(e.target.value)}
             className='bg-primary px-6 py-4 text-md font-medium border-2 w-[250px] md:w-[700px] lg:w-[350px] border-gray-100 focus:outline-none focus:border-2 focus:border-gray-300 flex-1 rounded-lg'
             placeholder='Add comment..'
           />

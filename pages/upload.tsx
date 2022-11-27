@@ -84,6 +84,10 @@ const Upload = () => {
     setTopic('');
   };
 
+  const handleClose = () => {
+    router.push('/');
+  };
+
   return (
     <div className='flex w-full h-full absolute left-0 top-[60px] lg:top-[70px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center'>
       <div className=' bg-white rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-center items-center p-14 pt-6'>
@@ -114,8 +118,8 @@ const Upload = () => {
                       <p className='text-gray-400 text-center mt-10 text-sm leading-10'>
                         MP4 or WebM or ogg <br />
                         720x1280 resolution or higher <br />
-                        Up to 10 minutes <br />
-                        Less than 2 GB
+                        5 minutes to 10 minutes <br />
+                        Less than 1 GB
                       </p>
                       <p className='bg-[#F51997] text-center mt-8 rounded text-white text-md font-medium p-2 w-52 outline-none'>
                         Select file
@@ -198,6 +202,15 @@ const Upload = () => {
               className='bg-[#F51997] text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
             >
               {savingPost ? 'Posting...' : 'Post'}
+            </button>
+          </div>
+          <div className="flex gap-6 mt-10">
+            <button
+              onClick={handleClose}
+              type='button'
+              className="border-gray-300 border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none"
+            >
+              Close
             </button>
           </div>
         </div>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { GoVerified } from 'react-icons/go';
 import Link from 'next/link';
 import axios from 'axios';
 
@@ -44,7 +43,6 @@ const Search = ({ videos }: { videos: Video[] }) => {
                   <div>
                     <div>
                       <p className='flex gap-1 items-center text-lg font-bold text-primary'>
-                        {user.userName} <GoVerified className='text-blue-400' />
                       </p>
                       <p className='capitalize text-gray-400 text-sm'>
                         {user.userName}
